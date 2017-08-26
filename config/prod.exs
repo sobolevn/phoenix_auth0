@@ -23,7 +23,7 @@ config :phoenix_auth0, PhoenixAuth0Web.Endpoint,
   cache_static_manifest: "priv/static/cache_manifest.json"
 
 # Configure Database
-config :phoenix_auth0, PhoenixAuth0Web.Repo,
+config :phoenix_auth0, PhoenixAuth0.Repo,
   adapter: Ecto.Adapters.Postgres,
   url: {:system, "DATABASE_URL"},
   pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10"),
