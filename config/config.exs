@@ -12,7 +12,7 @@ config :phoenix_auth0,
 # Configures the endpoint
 config :phoenix_auth0, PhoenixAuth0Web.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: {:system, "SECRET_KEY"},
+  secret_key_base: System.get_env("SECRET_KEY"),
   render_errors: [view: PhoenixAuth0Web.ErrorView, accepts: ~w(html json)],
   pubsub: [name: PhoenixAuth0.PubSub,
            adapter: Phoenix.PubSub.PG2]
